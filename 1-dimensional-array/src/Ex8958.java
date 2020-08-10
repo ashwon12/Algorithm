@@ -13,7 +13,9 @@ public class Ex8958 {
 			str[i]=scan.next();
 			for(int j=0; j<str[i].length(); j++) {
 				if(str[i].charAt(j)=='O') {
-					score += ++count;
+					score++;
+					score=score+count;
+					count++;
 				}else {
 					count=0;
 				}

@@ -7,7 +7,7 @@ public class Ex1065 {
 		int N=scan.nextInt();
 		int count=0;
 		
-		for(int i=0; i<N; i++) {
+		for(int i=1; i<=N; i++) {
 			if(whoareyou(i) == true) {
 				count ++;
 			}

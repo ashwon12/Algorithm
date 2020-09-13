@@ -12,11 +12,14 @@ public class homework_2 {
 	}
 	
 	public static int output(int n) {
-		if(n<=1) {
-			return n;
+		if(n == 1) {
+			return 1;
+		}else if(n == 2) {
+			return 2;
 		}else {
 			return output(n-1)+output(n-2);
 		}
+			
 	}
 
 }

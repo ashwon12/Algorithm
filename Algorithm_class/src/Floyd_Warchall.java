@@ -20,7 +20,12 @@ public class Floyd_Warchall {
 		for(int k=0; k<V; k++) {
 			for(int i=0; i<V; i++) {
 				for(int j=0; j<V; j++) {
-					D[i][j]= MIN(D[i][j],D[i][k]+D[k][j]);
+					if(i==j) {
+						D[i][j]=0;
+					}else {
+						D[i][j]= MIN(D[i][j],D[i][k]+D[k][j]);
+					}
+					
 				}
 			}
 		}

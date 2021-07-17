@@ -18,14 +18,15 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))){
         numList.add(st.nextToken().toInt())
     }
 
-    for(i in 0 until N-2){
+    loop@for(i in 0 until N-2){
         for( k in i+1 until N-1){
             for (j in k+1 until N){
-                var temp  = numList.get(i) + numList.get(k) + numList.get(j)
-                if(result == temp){
+                val temp  = numList[i] + numList[k] + numList[j]
+                if(M == temp){
                     result = temp
-                    break
-                } else if(result > abs(M-temp)){
+                    break@loop
+                }
+                else if(temp < M && abs(M-temp) < abs(M-result)){
                     result = temp
                 }
             }
